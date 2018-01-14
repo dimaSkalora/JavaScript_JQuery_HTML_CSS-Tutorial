@@ -1,0 +1,21 @@
+Book
+{
+    background-color: #ffffff;
+    width: 100%;
+}
+Details
+{
+    display: block;
+    margin-bottom: 30pt;
+    margin-left: 0;
+}
+TITLE
+{
+    color: #FF0000;
+    font-size: 20pt;
+}
+Author
+{
+    color: #0000FF;
+    font-size: 20pt;
+}
