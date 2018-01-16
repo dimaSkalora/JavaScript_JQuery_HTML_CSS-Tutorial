@@ -26,3 +26,20 @@
 24. HTML URL And Encode
 25. XHTML
 26. HTML Summary
+
+<a href ="http://www.wideskills.com/technology/html5-tutorial">HTML5 Tutorial(wideskills.com)</a>
+================================================================================================
+
+01. Introduction To HTML5
+02 .New Semantic Elements In HTML5
+03. New Form Elements In HTML5
+04. New Input Types In HTML5
+05. HTML5 Miscellaneous Elements
+06. New Attributes In HTML5
+07. New Event Attributes In HTML5
+08. HTML5 Audio And Video
+09. HTML5 Canvas
+10. HTML5 SVG
+11. HTML5 Geolocation
+12. HTML5 Web Storage
+13. HTML5 Drag And Drop
