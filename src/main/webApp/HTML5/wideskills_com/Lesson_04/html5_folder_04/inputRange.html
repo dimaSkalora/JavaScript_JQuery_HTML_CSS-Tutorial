@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Range Example</title>
+    <script type="text/javascript">
+        window.onload = function()
+        {
+            document.getElementById("result").innerHTML = "The value you selected is " + document.getElementById("myRange").value;
+            document.getElementById("myRange").onchange = function()
+            {
+                document.getElementById("result").innerHTML = "The value you selected is " + document.getElementById("myRange").value;
+            }
+        }
+    </script>
+</head>
+<body>
+Select a value:
+<input type="range" value="50" min="10" max="100" step="2" id="myRange"><br>
+<div id="result"></div>
+</body>
+</html>

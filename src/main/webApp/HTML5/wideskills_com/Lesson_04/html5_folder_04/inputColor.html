@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Example</title>
+    <style>
+        div{
+            height:100px;
+            width:100px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function()
+        {
+            document.getElementById("favColor").onchange = function()
+            {
+                document.getElementById("box").style.backgroundColor = document.getElementById("favColor").value;
+            }
+        }
+    </script>
+</head>
+<body>
+Your favorite color:
+<input type="color" id="favColor" value="#FA5882"><br>
+<div id="box"></div>
+</body>
+</html>
