@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dialog Example</title>
+    <script type="text/JavaScript">
+        window.onload = function()
+        {
+            var dialog = document.getElementById('myDialog');
+            document.getElementById('show').onclick = function() {
+                dialog.show();
+            };
+            document.getElementById('hide').onclick = function() {
+                dialog.close();
+            };
+        }
+    </script>
+</head>
+<body>
+<dialog id="myDialog" open style="width:50%;background-color:pink;border:1px solid black;">
+    <p>This is my first dialog box!!!</p>
+    <button id="hide">Close</button>
+</dialog>
+<button id="show">Show Dialog</button>
+</div>
+</body>
+</html>
