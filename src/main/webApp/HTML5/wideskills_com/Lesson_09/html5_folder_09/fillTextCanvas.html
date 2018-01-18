@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text</title>
+    <script>
+        window.onload = function()
+        {
+            var myCanvas = document.getElementById('firstCanvas');
+            var myContext = myCanvas.getContext('2d');
+            myContext.font = 'bold 30pt Arial';
+            myContext.fillStyle = "purple";
+            myContext.fillText('Welcome', 5, 50);
+            myContext.font = 'italic 50pt Calibri';
+            myContext.strokeStyle = "#8A0829";
+            myContext.strokeText('Welcome', 5, 120);
+        }
+    </script>
+</head>
+<body>
+<canvas id="firstCanvas" height="500" width="500">
+    Your browser does not support canvas element!!!
+</canvas><br />
+</body>
+</html>

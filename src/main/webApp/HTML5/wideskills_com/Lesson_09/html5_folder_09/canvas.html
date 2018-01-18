@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas</title>
+    <style>
+        #firstCanvas{
+            border:2px solid purple;
+            background-color:pink;
+        }
+    </style>
+    <script>
+        var myCanvas, myContext;
+        window.onload = function()
+        {
+            myCanvas = document.getElementById('firstCanvas');
+            myContext = myCanvas.getContext('2d');
+        }
+        function changeSize()
+        {
+            myCanvas.height = 400;
+            myCanvas.width = 400;
+        }
+        function writeText()
+        {
+            myContext.font = 'italic 30pt Calibri';
+            myContext.fillStyle = "purple";
+            myContext.fillText('Welcome!!!', 5, 50);
+        }
+    </script>
+</head>
+<body>
+<p>Below is the canvas!!!</p>
+<canvas id="firstCanvas" height="200" width="200">
+    Your browser does not support canvas element!!!
+</canvas><br />
+<button id="btnChange" onclick="changeSize();">Change Size</button>
+<button id="btnWrite" onclick="writeText();">Write Text</button>
+</body>
+</html>

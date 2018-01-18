@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rectangles</title>
+    <script>
+        window.onload = function()
+        {
+            var myCanvas = document.getElementById('firstCanvas');
+            var myContext = myCanvas.getContext('2d');
+            myContext.beginPath();
+            myContext.rect(50, 50, 300, 200);
+            myContext.fillStyle = 'pink';
+            myContext.fill();
+            myContext.lineWidth = 5;
+            myContext.strokeStyle = 'purple';
+            myContext.stroke();
+            myContext.beginPath();
+            myContext.rect(75, 100, 250, 100);
+            myContext.fillStyle ="#FF0088";
+            myContext.fill();
+        }
+    </script>
+</head>
+<body>
+<canvas id="firstCanvas" height="500" width="500">
+    Your browser does not support canvas element!!!
+</canvas><br />
+</body>
+</html>

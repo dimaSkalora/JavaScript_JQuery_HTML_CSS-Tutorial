@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arcs and Circles</title>
+    <script>
+        window.onload = function()
+        {
+            var myCanvas = document.getElementById('firstCanvas');
+            var myContext = myCanvas.getContext('2d');
+            var x = 150;
+            var y = 100;
+            var radius = 50;
+            var startAngle = 0 * Math.PI;
+            var endAngle = .75 * Math.PI;
+            myContext.beginPath();
+            myContext.lineWidth = 5;
+            myContext.arc(x, y, radius, startAngle, endAngle, false);
+            myContext.strokeStyle = '#FF0088';
+            myContext.stroke();
+            myContext.beginPath();
+            myContext.arc(350, y, radius, startAngle, endAngle, true);
+            myContext.strokeStyle = 'purple';
+            myContext.stroke();
+            var y = 250;
+            var radius = 75;
+            myContext.beginPath();
+            myContext.arc(x, y, radius, startAngle, endAngle, false);
+            myContext.fillStyle = 'purple';
+            myContext.fill();
+            myContext.beginPath();
+            myContext.arc(350, y, radius, startAngle, endAngle, true);
+            myContext.fillStyle = '#FF0088';
+            myContext.fill();
+            myContext.beginPath();
+            myContext.arc(200, 450, 100, 0*Math.PI, 2*Math.PI, true);
+            myContext.fillStyle = 'gray';
+            myContext.fill();
+        }
+    </script>
+</head>
+<body>
+<canvas id="firstCanvas" height="600" width="600">
+    Your browser does not support canvas element!!!
+</canvas><br />
+</body>
+</html>

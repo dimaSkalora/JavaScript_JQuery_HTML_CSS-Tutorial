@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lines</title>
+    <style>
+        #firstCanvas{
+            border:2px solid purple;
+        }
+    </style>
+    <script>
+        var myCanvas, myContext;
+        window.onload = function()
+        {
+            myCanvas = document.getElementById('firstCanvas');
+            myContext = myCanvas.getContext('2d');
+            myContext.beginPath();
+            myContext.moveTo(50, 150);
+            myContext.lineTo(150, 50);
+            myContext.stroke();
+            myContext.beginPath();
+            myContext.moveTo(170, 90);
+            myContext.lineTo(320, 90);
+            myContext.strokeStyle = "#FF0088";
+            myContext.stroke();
+            myContext.beginPath();
+            myContext.strokeStyle = "#B404AE";
+            myContext.lineWidth = 10;
+            myContext.font = 'italic 12pt Calibri';
+            myContext.fillStyle = "#8A0829";
+            myContext.lineCap = "butt";
+            myContext.moveTo(100, 250);
+            myContext.lineTo(100, 350);
+            myContext.fillText('Butt', 90, 370);
+            myContext.stroke();
+            myContext.beginPath();
+            myContext.lineCap = "square";
+            myContext.moveTo(145, 250);
+            myContext.lineTo(145, 350);
+            myContext.fillText('Square', 125, 370);
+            myContext.stroke();
+            myContext.beginPath();
+            myContext.lineCap = "round";
+            myContext.moveTo(190, 250);
+            myContext.lineTo(190, 350);
+            myContext.fillText('Round', 175, 370);
+            myContext.stroke();
+        }
+    </script>
+</head>
+<body>
+<canvas id="firstCanvas" height="400" width="400">
+    Your browser does not support canvas element!!!
+</canvas><br />
+</body>
+</html>

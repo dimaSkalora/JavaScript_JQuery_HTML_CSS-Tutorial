@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quadratic and Bezier Curves</title>
+    <script>
+        window.onload = function()
+        {
+            var myCanvas = document.getElementById('firstCanvas');
+            var myContext = myCanvas.getContext('2d');
+            myContext.beginPath();
+            myContext.moveTo(50, 150);
+            myContext.quadraticCurveTo(150, 0, 250, 150);
+            myContext.lineWidth = 6;
+            myContext.strokeStyle = 'purple';
+            myContext.stroke();
+            myContext.beginPath();
+            myContext.moveTo(300, 150);
+            myContext.quadraticCurveTo(350, 400, 500, 150);
+            myContext.lineWidth = 6;
+            myContext.fillStyle = 'pink';
+            myContext.fill();
+            myContext.beginPath();
+            myContext.moveTo(50, 250);
+            myContext.quadraticCurveTo(150, 300, 250, 500, 350, 450);
+            myContext.fillStyle = '#FF0080';
+            myContext.fill();
+        }
+    </script>
+</head>
+<body>
+<canvas id="firstCanvas" height="600" width="600">
+    Your browser does not support canvas element!!!
+</canvas><br />
+</body>
+</html>
