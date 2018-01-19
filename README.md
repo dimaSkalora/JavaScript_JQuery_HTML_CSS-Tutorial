@@ -43,3 +43,30 @@
 11. HTML5 Geolocation
 12. HTML5 Web Storage
 13. HTML5 Drag And Drop
+
+<a href ="http://www.wideskills.com/css-tutorial">CSS Tutorial(wideskills.com)</a>
+===================================================================================
+
+01. Introduction To CSS
+02. What Is CSS
+03. Basic Syntax Of CSS
+04. How To Add CSS
+05. CSS Colors
+06. CSS Backgrounds
+07. CSS Fonts
+08. CSS Text
+09. CSS Links
+10. CSS Lists
+11. CSS Tables
+12. CSS Images
+13. CSS Identification & Grouping Of Elements
+14. CSS The Box Model
+15. CSS Margins & Padding
+22. CSS Pseudo Class
+23. CSS Pseudo Elements
+24. CSS Navigation Bar
+25. CSS Image Gallery
+26. CSS Image Transparency
+27. CSS Image Sprites
+28. CSS Media
+29. CSS Attribute Selectors
