@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Storage</title>
+    <script>
+        function SaveData()
+        {
+            if(window.sessionStorage)
+            {
+                if(document.getElementById('answer').value == 8)
+                {
+                    window.sessionStorage.setItem("level", 2);
+                    window.sessionStorage.setItem("score", 100);
+                }
+                else
+                {
+                    window.sessionStorage.setItem("level", 1);
+                    window.sessionStorage.setItem("score", 0);
+                }
+            }
+            else
+                alert("Your browser does not support HTML5 sessionStorage!!!");
+        }
+        function GetData()
+        {
+            if(window.localStorage)
+            {
+                var output;
+                var level =  window.sessionStorage.getItem("level");
+                if(level == 1)
+                    output = "Your answer is wrong. Try Again!!!";
+                else if(level ==2)
+                    output = "Congratulations!!! You completed Level 1. Your score is " + window.sessionStorage.getItem("score");
+                document.getElementById("result").innerHTML = "<b>" + output + "</b>";
+            }
+            else
+                alert("Your browser does not support HTML5 sessionStorage!!!");
+        }
+        function RemoveData()
+        {
+            if(window.localStorage)
+            {
+                window.localStorage.removeItem("lastName");
+                alert("Last name removed successfully!!!");
+            }
+            else
+                alert("Your browser does not support HTML5 sessionStorage!!!");
+        }
+    </script>
+</head>
+<body>
+Find Out: <b>6 &times; 4 &divide; 3 + <input id="answer" type="text" size="1" /> - 7 = 9 <br /><br />
+    <button id="saveData" onclick="SaveData();">Submit</button>
+    <button id="getData" onclick="GetData();">Proceed</button><br /><br />
+    <div id="result"></div>
+</body>
+</html>

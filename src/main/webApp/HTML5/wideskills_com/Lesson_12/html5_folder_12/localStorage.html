@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Storage</title>
+    <script>
+        function SaveData()
+        {
+            if(window.localStorage)
+            {
+                var first = document.getElementById('fName').value;
+                var last =  document.getElementById('lName').value;
+                window.localStorage.setItem("firstName", first);
+                window.localStorage.setItem("lastName", last);
+                alert("Data is saved successfully!!!");
+            }
+            else
+                alert("Your browser does not support HTML5 localStorage!!!");
+        }
+        function GetData()
+        {
+            if(window.localStorage)
+            {
+                var output = "Welcome back " + window.localStorage.getItem("firstName") + " " + window.localStorage.getItem("lastName");
+                document.getElementById("result").innerHTML = output;
+            }
+            else
+                alert("Your browser does not support HTML5 localStorage!!!");
+        }
+        function RemoveData()
+        {
+            if(window.localStorage)
+            {
+                window.localStorage.removeItem("lastName");
+                alert("Last name removed successfully!!!");
+            }
+            else
+                alert("Your browser does not support HTML5 localStorage!!!");
+        }
+    </script>
+</head>
+<body>
+First Name: <input type="text" id="fName" /><br />
+Last Name:<input type="text" id="lName" /><br />
+<button id="saveData" onclick="SaveData();">Store Data</button>
+<button id="getData" onclick="GetData();">Get Data</button>
+<button id="removeData" onclick="RemoveData();">Remove Last Name</button><br /><br />
+<div id="result"></div>
+</body>
+</html>
