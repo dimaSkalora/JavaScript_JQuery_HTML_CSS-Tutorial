@@ -1,0 +1,15 @@
+/* style.css -- A simple style sheet */
+body
+{
+    background-color : yellow;
+}
+h2
+{
+    text-align:center;
+    background-color:green;
+}
+p
+{
+    color : blue;
+    font-size :20px;
+}
