@@ -1,0 +1,11 @@
+/* stylefile.css -- A simple style sheet */
+body
+{
+    background-color : yellow;
+}
+p
+{
+    font-family : arial;
+    color : blue;
+    font-size :20px;
+}
