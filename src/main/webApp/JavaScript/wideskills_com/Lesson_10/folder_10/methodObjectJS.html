@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        var car = new Object();
+        car.manufacturer = "Toyota";
+        car.move = function(x,y)
+        {
+            this.xCoordinate = this.xCoordinate + x;
+            this.yCoordinate = this.yCoordinate + y;
+        };
+    </script>
+</head>
+<body>
+<hr>
+<script type = "text/javascript">
+    car.xCoordinate = 10;
+    car.yCoordinate = 10;
+    document.write("The Position of the car is now at " + car.xCoordinate + ", " + car.yCoordinate + ".<br/>")
+    car.move(10,10);
+    document.write("The Position of the car is now at " + car.xCoordinate + ", " + car.yCoordinate + ".<br/>")
+</script>
+</body>
+</html>

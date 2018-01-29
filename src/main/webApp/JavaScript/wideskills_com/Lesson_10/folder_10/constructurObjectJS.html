@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function createPerson(firstname, lastname, age)
+    {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+    }
+    var Richard = new createPerson("Richard", "Wellington", 23);
+    document.write(Richard.firstname+" "+Richard.lastname+" "+Richard.age);
+</script>
+</body>
+</html>
