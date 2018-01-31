@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+Displaying date in different formats.
+<hr>
+<script type = "text/javascript">
+    var dateNow = new Date();
+    document.write("The date has been created using the current date and time.<br/>");
+    document.write("The date in GMT format is " + dateNow.toGMTString() + ".<br/>");
+    document.write("The date in UTC format is " + dateNow.toUTCString() + ".<br/>");
+    document.write("The date as local date and time is " + dateNow.toLocaleString() + ".<br/>");
+    document.write("The date converted to string is " + dateNow.toString() + ".<br/>");
+    document.write("The date in milliseconds using the UTC 1 JAN 1970 is " + dateNow.UTC() + ". This works for a date for which day, month and year have been specified.<br/>");
+    document.write("The date in milliseconds since 1 JAN 1970 is " + dateNow.valueOf() + ".<br/>");
+</script>
+</body>
+</html>

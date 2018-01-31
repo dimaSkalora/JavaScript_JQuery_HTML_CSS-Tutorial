@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+Manipulating specific parts of the date.
+<hr>
+<script type = "text/javascript">
+    var dateNow = new Date(2007,8,9, 12, 1, 13, 1);
+    document.write("The date created is " + dateNow + ".<br/>");
+    document.write("The date part of the date is changed .<br/>");
+    dateNow.setDate(20);
+    document.write("The date is " + dateNow + ".<br/>");
+    document.write("The month part of the date is changed.<br/>");
+    dateNow.setMonth(12);
+    document.write("The date is " + dateNow + ".<br/>");
+    document.write("The full year part of the date is changed.<br/>");
+    dateNow.setFullYear(1999);
+    document.write("The date is " + dateNow + ".<br/>");
+    document.write("The hours part of the date is changed.<br/>");
+    dateNow.setHours(5);
+    document.write("The date is " + dateNow + ".<br/>");
+    document.write("The minutes part of the date is changed.<br/>");
+    dateNow.setMinutes(34);
+    document.write("The date is " + dateNow + ".<br/>");
+    document.write("The seconds part of the date is changed.<br/>");
+    dateNow.setSeconds(56);
+    document.write("The date is " + dateNow + ".<br/>");
+</script>
+</body>
+</html>
