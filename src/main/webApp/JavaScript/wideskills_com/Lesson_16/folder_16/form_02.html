@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function buttonClick()
+        {
+            alert("A button has been clicked");
+        }
+    </script>
+</head>
+
+<body style = "font-size:16px;">
+<hr>
+<div align="center">
+    <form action = "#">
+        <button id = "clicker">
+            Click here
+        </button>
+    </form>
+</div>
+<script type="text/javascript">
+    document.getElementById("clicker").addEventListener("click",buttonClick,true);
+</script>
+</body>
+</html>
