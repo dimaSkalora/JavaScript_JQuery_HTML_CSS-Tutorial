@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function displayalert()
+        {
+            try
+            {
+                var textElement = document.getElementById("textbox");
+                if(isNaN(parseInt(textElement.value)))
+                {
+                    throw new Error("The entered value " + textElement.value + " is not a number");
+                }
+                else
+                {
+                    alert("The value is " + textElement.value);
+                }
+            }
+            catch(e)
+            {
+                alert("The error name is " + e.name + ", and the message is "+ e.message);
+            }
+            finally
+            {
+                alert("Inside finally");
+            }
+        }
+    </script>
+</head>
+<body style = "font-size:16px;">
+<hr>
+<div id="main" align="center">
+    Hello!
+    <br/>
+    <input type="text" id="textbox"/>
+    <br />
+    <button onclick="displayalert()">Display Alert</button>
+</div>
+<script type="text/javascript">
+</script>
+</body>
+</html>

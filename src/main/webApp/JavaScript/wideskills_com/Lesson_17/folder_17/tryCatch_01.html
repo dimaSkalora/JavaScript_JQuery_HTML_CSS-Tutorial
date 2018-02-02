@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function displayalert()
+        {
+            try
+            {
+                var divElement = document.getElementById("side");
+                alert(divElement.innerHTML);
+                alert("Handled error");
+            }
+            catch(e)
+            {
+                alert("The error name is " + e.name + ", and the message is "+ e.message);
+            }
+        }
+    </script>
+</head>
+<body style = "font-size:16px;">
+<hr>
+<div id="main" align="center">
+    Hello!
+    <br/>
+    <button onclick="displayalert()">Display Alert</button>
+</div>
+<script type="text/javascript">
+</script>
+</body>
+</html>
