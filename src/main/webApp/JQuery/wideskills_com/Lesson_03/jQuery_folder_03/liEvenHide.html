@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Sample Code</title>
+    <script src="jquery.js"></script>
+    <script>
+        //$ ("li: even") à Это выберет все четные элементы <li> на странице
+        $(document).ready(function() {
+            $("button").click(function(){
+                $("li:even").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+<button>Click Me!!!</button><br />
+<p>First List</p>
+<ul>
+    <li>Aaron</li>
+    <li>Abel</li>
+    <li>Hannah</li>
+    <li>Sarah</li>
+</ul>
+<p>Second List</p>
+<ul>
+    <li>Maths</li>
+    <li>Science</li>
+    <li>English</li>
+</ul>
+</body>
+</html>
