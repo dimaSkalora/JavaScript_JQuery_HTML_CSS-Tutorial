@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Sample Code</title>
+    <style>
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        x=0;
+        $(document).ready(function() {
+            $("#txtInput").keydown(function(){
+                $("#txtInput").css("background-color","red");
+            });
+            $("#txtInput").keyup(function(){
+                $("#txtInput").css("background-color","yellow");
+            });
+        });
+    </script>
+</head>
+<body>
+Enter Input:<input id="txtInput" />
+</body>
+</html>

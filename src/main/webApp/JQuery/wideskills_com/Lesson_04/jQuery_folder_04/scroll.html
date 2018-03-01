@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Sample Code</title>
+    <style>
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        x=0;
+        $(document).ready(function() {
+            $("div").scroll(function(){
+                $("span").text(x+=1);
+            });
+        });
+    </script>
+</head>
+<body>
+<div style="border:2px solid black;width:100px;height:100px;overflow:scroll;">
+    This is a sample. This is a sample.
+    This is a sample. This is a sample.
+    This is a sample. This is a sample.
+    This is a sample. This is a sample.
+    This is a sample. This is a sample.
+    This is a sample. This is a sample.
+    This is a sample. This is a sample.
+    This is a sample. This is a sample.
+    This is a sample. This is a sample.
+    This is a sample. This is a sample.
+    This is a sample. This is a sample.</div>
+<p>No: of scrolls:<span>0</span></p>
+</body>
+</html>

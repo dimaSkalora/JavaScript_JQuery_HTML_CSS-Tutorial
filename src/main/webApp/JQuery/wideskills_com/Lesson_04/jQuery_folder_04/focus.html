@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Sample Code</title>
+    <style>
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#password").focus(function(){
+                if($("#uname").val() == "")
+                    alert("Enter your user name.");
+                else
+                    alert("Welcome " + $("#uname").val() + ". Enter your password.");
+            });
+        });
+    </script>
+</head>
+<body>
+User Name: <input type="text" id="uname" /><br />
+Password: <input type="text" id="password"/>
+</body>
+</html>

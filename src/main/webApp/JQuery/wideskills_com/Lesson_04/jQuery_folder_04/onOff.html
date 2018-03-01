@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Sample Code</title>
+    <style>
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            //multiple events sharing the same handling function
+            $("div").on(
+                "click scroll",
+                function() {
+                    alert("Clicked or Scrolled");
+                });
+            //multiple events with different handling functions
+            // event:handling function
+            $("div").on({
+                "mouseenter":function(){$("div").css("font-size","50px");},
+                "mouseleave":function(){$("div").css("font-size","20px");}
+            });
+            //Off the handler
+            $("button").click(function(){
+                $("div").off("scroll");
+            });
+        });
+    </script>
+</head>
+<body>
+<div style="border:1px solid black;height:100px;width:200px;overflow:auto;">Enter in or Move out to Change the Style!!!Click or Scroll to See the Message!!!</div>
+<br /><button>Remove the Scroll Handler</button>
+</body>
+</html>
