@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Sample Code</title>
+    <style>
+        div{
+            height:60px;
+            width:60px;
+            float:left;
+            margin:5px;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        //Add the code here
+        $(document).ready(function() {
+            $("#second").css("display", "inline-block");
+            $("button").click(function(){
+                $("#first").fadeToggle("slow").slideToggle("slow");
+                $("#second").fadeToggle("slow").delay(1000).slideToggle("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="first" style="background:#3d9a44;">Visible</div>
+<div id="second" style="display:none;background:#7d5667;">Invisible</div><br />
+<button>Click</button>
+</body>
+</html>
