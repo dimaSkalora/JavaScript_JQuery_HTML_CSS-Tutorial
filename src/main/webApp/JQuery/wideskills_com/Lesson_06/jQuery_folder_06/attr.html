@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>Sample Code</title>
+    <script src="jquery.js"></script>
+    <script>
+        //Add the code here
+        $(document).ready(function() {
+            $("#btnSubmit").click(function(){
+                var setVal = $("label:first").attr("for");
+                $("#result").html(setVal);
+                $("#btnSubmit").attr({"value":"Click"});
+            });
+        });
+    </script>
+</head>
+<body>
+<h3>Input Form</h3>
+<label for="uname"><b>User Name:</b></label><input type="text" id="uname" /><br />
+<label for="pwd"><b>Password:</b></label><input type="text" id="pwd" /><br /><br />
+<input type="button" id="btnSubmit" value="Submit" /><br />
+<div id="result"></div>
+</body>
+</html>
