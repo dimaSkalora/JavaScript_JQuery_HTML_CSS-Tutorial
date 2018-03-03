@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>Sample Code</title>
+    <script src="jquery.js"></script>
+    <script>
+        //add our code here
+        $(document).ready(function() {
+            $("button").click(function(){
+                $("p").after(":<b>Modified List</b>");
+                $("ul").after("<li>Another Cake</li>");
+            });
+        });
+    </script>
+</head>
+<body>
+<p>Cakes List</p>
+<ul>
+    <li>Black Forest Cake</li>
+    <li>Chocolate Cake</li>
+    <li>Pineapple Cake</li>
+    <li>Apple Cake</li>
+</ul><br />
+<button>Click</button>
+</body>
+</html>
