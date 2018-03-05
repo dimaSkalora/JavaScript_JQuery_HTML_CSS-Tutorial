@@ -70,3 +70,51 @@
 27. CSS Image Sprites
 28. CSS Media
 29. CSS Attribute Selectors
+
+<a href ="http://www.wideskills.com/javascript-tutorial">Javascript Tutorial(wideskills.com)</a>
+================================================================================================
+01. Introduction To Javascript
+02. Enable Disable Javascript
+03. Where To Place The Code
+04. Variables And Simple Types In Javascript
+05. Basic Operators In Javascript
+06. Branching The Code In Javascript
+07. Loops In Javascript
+08. Functions In Javascript
+09. Events In Javascript
+10. Objects And Functions In Javascript
+11. Numbers In Javascript
+12. Strings In Javascript
+13. Dates In Javascript
+14. Math In Javascript
+15. Regular Expressions In Javascript
+16. Event Handlers In Javascript
+17. Exception Handling In Javascript
+18. Cookies In Javascript
+19. Browser Detection And Page Redirection In Javascript
+20. Using The Window Object
+
+<a href ="http://www.wideskills.com/jquery-tutorial">JQuery Tutorial(wideskills.com)</a>
+=========================================================================================
+01. JQuery Introduction
+02. JQuery Syntax Basics
+03. JQuery Selectors
+04. JQuery Events
+05. JQuery Effects
+06. JQuery And HTML
+07. JQuery DOM Manipulation
+08. JQuery Traversing
+
+<a href ="http://www.wideskills.com/jquery-ui-tutorial">JQuery UI Tutorial(wideskills.com)</a>
+=============================================================================================
+01. JQuery UI Introduction
+02. JQuery UI Draggable
+03. JQuery UI Droppable
+04. JQuery UI Resizable
+05. JQuery UI Selectable
+06. JQuery UI Sortable
+07. JQuery UI Accordion
+08. JQuery UI Tabs
+09. JQuery UI AutoComplete
+13. JQuery UI Widgets: Menu And Tooltip
+14. JQuery UI Effects
