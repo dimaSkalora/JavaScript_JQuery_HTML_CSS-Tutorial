@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>Sample Code</title>
+    <style>
+        .parent *
+        {
+            display: block;
+            border: 1px solid black;
+            color: purple;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        //add our code here
+        $(document).ready(function() {
+            $("button").click(function(){
+                $("p:first").parentsUntil("body").css({"color":"red","border":"4px solid green"});
+            });
+        });
+    </script>
+</head>
+<body class="parent">This is the main body section.
+<div id="mainparent">
+    <span>Below is an ordered list.</span>
+    <ol id="cakes">Cakes List
+        <li class="child">Black Forest Cake</li>
+        <li>Chocolate Cake</li>
+        <li class="child">Pineapple Cake</li>
+        <p>Just a paragraph in between.</p>
+        <li>Apple Cake</li>
+    </ol>
+    <p>The <b>ordered list</b> ends here.</p>
+</div>
+<button>Click</button>
+</body>
+</html>
