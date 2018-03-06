@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #parent
+        {
+            width: 850px;
+            height: 550px;
+            border:2px solid black;
+        }
+        .child
+        {
+            width:180px;
+            height:80px;
+            border:1px solid black;
+            margin:5px;
+            font-size: 15pt;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#child1").draggable({axis:"x"});
+            $("#child2").draggable({axis:"y"});
+            $("#child3").draggable({containment:"#parent", cursor:"pointer"});
+            $("#child4").draggable({delay:1000});
+        });
+    </script>
+</head>
+
+<body>
+<div id="parent"class="ui-widget-content">
+    <p class="child" id="child1" style="background-color:fuchsia">I will move only HORIZONTALLY!!!</p>
+    <p class="child" id="child2" style="background-color:gray">I will move only VERTICALLY!!!</p>
+    <p class="child" id="child3" style="background-color:pink">I will move only INSIDE the big box!!!</p>
+    <p class="child" id="child4" style="background-color:aqua">I will start moving only AFTER one minute!!!</p>
+</div>
+</body>
+</html>

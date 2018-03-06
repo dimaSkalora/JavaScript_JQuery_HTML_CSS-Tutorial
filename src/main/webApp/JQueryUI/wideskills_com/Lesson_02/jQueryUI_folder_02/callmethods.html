@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #parent
+        {
+            width: 850px;
+            height: 550px;
+            border:2px solid black;
+        }
+        .child
+        {
+            width:180px;
+            height:80px;
+            border:1px solid black;
+            margin:5px;
+            font-size: 15pt;
+            float:left;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#child1").draggable();
+            $("#btnDisable").click(function(){
+                $("#child1").draggable('disable');
+                alert("Move is disabled!!!");
+            });
+            $("#btnEnable").click(function(){
+                $("#child1").draggable('enable');
+                alert("Move is enabled!!!");
+            });
+
+            $("#child2").draggable();
+            $("#child2").click(function(){
+                $("#child2").draggable('destroy');
+                alert("Movability is Destroyed!!!");
+            });
+
+            $("#child3").draggable({cursor:"pointer"});
+            $("#child3").click(function(){
+                var cursorType = $("#child3").draggable('option', 'cursor');
+                alert("The cursor type is " + cursorType);
+            });
+
+            $("#child4").draggable();
+            $("#btnOpacity").click(function(){
+                $("#child4").draggable("option","opacity","0.3");
+            });
+
+            $("#child5").draggable();
+            $("#child5").click(function(){
+                $("#child5").draggable("option",{cursor:"crosshair",axis:"y"});
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div id="parent"class="ui-widget-content">
+    <p class="child" id="child1" style="background-color:fuchsia;height:140px;">I am now movable. I will stop moving if you click Disable button and again start moving if you click     Enable button!!!</p>
+    <p class="child" id="child2" style="background-color:aqua;height:110px;">I am now movable. I will NEVER move again if you click ME!!!</p>
+    <p class="child" id="child3" style="background-color:gray">Click me to know my cursor type!!!</p>
+    <p class="child" id="child4" style="background-color:silver;height:110px;">Click the Set Opacity button to make me transparent while moving!!!</p>
+    <p class="child" id="child5" style="background-color:lime;height:110px;">Click Me to Change my Cursor and Moving Direction while moving!!!</p>
+</div> <br />
+<button id="btnDisable">Disable</button>
+<button id="btnEnable">Enable</button>
+<button id="btnOpacity">Set Opacity</button>
+</body>
+</html>

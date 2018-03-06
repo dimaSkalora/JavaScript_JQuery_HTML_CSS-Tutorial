@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #parent
+        {
+            width: 850px;
+            height: 550px;
+            border:2px solid black;
+        }
+        .child
+        {
+            width:180px;
+            height:80px;
+            border:1px solid black;
+            margin:5px;
+            font-size: 15pt;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#child1").draggable({distance:100});
+            $("#child2").draggable();
+            $("#btnDisable").click(function(){
+                $("#child2").draggable({disabled:true});
+                alert("Move is disabled!!!");
+            });
+            $("#btnEnable").click(function(){
+                $("#child2").draggable({disabled:false});
+                alert("Move is enabled!!!");
+            });
+            $("#child3").draggable({helper:"clone"});
+            $("#child4").draggable({opacity:0.3});
+            $("#child5").draggable({revert:true, revertDuration:8000 });
+        });
+    </script>
+</head>
+
+<body>
+<div id="parent"class="ui-widget-content">
+    <p class="child" id="child1" style="background-color:fuchsia">I will move only if you move me for 100px!!!</p>
+    <p class="child" id="child2" style="background-color:gray;height:160px;">I will NOT be able to move once you click the Disable button and I will start moving once you click the Enable button!!!</p>
+    <p class="child" id="child3" style="background-color:pink">This is my helper!!!</p>
+    <p class="child" id="child4" style="background-color:aqua">I will be transparent while moving!!!</p>
+    <p class="child" id="child5" style="background-color:silver">I will go back to my original position!!!</p>
+</div> <br />
+<button id="btnDisable">Disable</button>
+<button id="btnEnable">Enable</button>
+</body>
+</html>

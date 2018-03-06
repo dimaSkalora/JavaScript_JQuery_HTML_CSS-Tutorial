@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #parent
+        {
+            width: 500px;
+            height: 500px;
+            border:2px solid black;
+        }
+        .child
+        {
+            width:180px;
+            height:180px;
+            border:1px solid black;
+            margin:5px;
+            font-size: 15pt;
+            background-color:aqua;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#btnMakeMovable").click(function(){
+                $("#child1").draggable({
+                    create:function(event,ui){
+                        alert("The element becomes movable.");
+                    },
+                    start:function(event,ui){
+                        $("#child1").css("background-color", "pink");
+                    },
+                    drag:function(event,ui){
+                        $("#info").text("The box is moving.");
+                    },
+                    stop:function(event,ui){
+                        alert("The element stopped moving.");
+                        $("#info").text("");
+
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="parent"class="ui-widget-content">
+    <p class="child" id="child1">Click the button Make Movable to make me movable. My color will be changed once I start moving.</p>
+    <div id="info" style="font-size:15pt"></div>
+</div>
+<button id="btnMakeMovable">Make Movable</button>
+</body>
+</html>
