@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .parent
+        {
+            width: 130px;
+            height: 130px;
+            border:2px solid black;
+            background-color:pink;
+            float:left;
+            margin:5px;
+        }
+        #source1
+        {
+            width:70px;
+            height:70px;
+            border:1px solid black;
+            margin:15px;
+            background-color:aqua;
+            font-size:15px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#source1").draggable();
+            $(".parent").droppable({drop:function(event,ui){
+                $(ui.draggable).html("Yes!!!I am in!!!");}});
+            $("#btnEnable").click(function(){
+                $("#parent1").droppable({disabled:false});
+                alert("The pink box is now droppable!!!");
+            });
+            $("#btnDisable").click(function(){
+                $("#parent1").droppable({disabled:true});
+                alert("The pink box is now not droppable!!!");
+            });
+            $("#parent2").droppable({tolerance:"touch"});
+            $("#parent3").droppable({tolerance:"fit"});
+            $("#parent4").droppable({tolerance:"pointer"});
+        });
+    </script>
+</head>
+<body>
+<button id="btnEnable">Enable</button>
+<button id="btnDisable">Disable</button>
+<div id="source1" class="ui-widget-content">
+    Drop me inside different boxes!!!
+</div>
+<div class="parent" id="parent1" class="ui-widget-header">Enable and Disable &nbsp;& &nbsp;Intersect Tolerance</div>
+<div class="parent" id="parent2" style="background-color:gray;" class="ui-widget-header">Touch Tolerance</div>
+<div class="parent" id="parent3" style="background-color:silver;" class="ui-widget-header">Fit Tolerance</div>
+<div class="parent" id="parent4" style="background-color:#99FF66;" class="ui-widget-header">Pointer Tolerance</div>
+</body>
+</html>

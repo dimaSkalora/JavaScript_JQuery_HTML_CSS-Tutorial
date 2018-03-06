@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #parent1, #parent2
+        {
+            width: 250px;
+            height: 250px;
+            border:2px solid black;
+            background-color:pink;
+            float:left;
+            margin:5px;
+        }
+        #child1, #child2
+        {
+            width: 150px;
+            height: 150px;
+            border:2px solid black;
+            background-color:silver;
+            float:left;
+            margin:25px;
+        }
+        #source
+        {
+            width:70px;
+            height:70px;
+            border:1px solid black;
+            margin:15px;
+            background-color:aqua;
+            font-size:15px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#source").draggable();
+            $("#parent1, #child1").droppable({
+                drop: function(event, ui) {
+                    $(this).find('p').html('Dropped!');}
+            });
+            $("#parent2, #child2").droppable({
+                greedy: true,
+                drop: function(event, ui) {
+                    $(this).find('p').html('Dropped!');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="source" class="ui-widget-content">
+    Drop me inside
+</div>
+<div id="parent1" class="ui-widget-header"><p>Outer Box</p>
+    <div id="child1" class="ui-widget-header"><p>Inner Box (NOT GREEDY)</p></div>
+</div>
+<div id="parent2" class="ui-widget-header"><p>Outer Box</p>
+    <div id="child2" class="ui-widget-header"><p>Inner Box (GREEDY)</p></div>
+</div>
+</body>
+</html>

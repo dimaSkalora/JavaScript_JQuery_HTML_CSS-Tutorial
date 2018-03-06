@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #main
+        {
+            width:500px;
+            height:500px;
+        }
+        .droppable
+        {
+            width: 150px;
+            height: 150px;
+            border:2px solid black;
+            background-color:silver;
+            float:left;
+            margin:10px;
+            float:right;
+        }
+        #source
+        {
+            width:70px;
+            height:70px;
+            border:1px solid black;
+            background-color:aqua;
+        }
+    </style>
+    <script>
+        $(document).ready(function()
+        {
+            $("#source").draggable();
+            $("#target1").click(function(){
+                $("#target1").droppable({
+                    create: function(event, ui) {
+                        $("#target1").html("Yes!!!I'm now droppable!!!");},
+                    activate: function(event, ui) {
+                        $("#source").html("I start moving!!!");},
+                    drop: function(event, ui) {
+                        $("#source").html("Yes!!!I'm in!!!");},
+                    over: function(event, ui) {
+                        $("#source").html("I'm entering inside!!!");},
+                    out: function(event, ui){
+                        $("#source").html("I'm outside!!");}
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="main">
+    <div id="source">I'm outside!!</div>
+    <div id="target1" class="droppable">Click ME to make me DROPPABLE</div>
+</div>
+</body>
+</html>

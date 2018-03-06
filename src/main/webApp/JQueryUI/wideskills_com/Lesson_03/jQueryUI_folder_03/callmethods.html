@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .droppable
+        {
+            width: 150px;
+            height: 150px;
+            border:2px solid black;
+            background-color:silver;
+            float:left;
+            margin:10px;
+        }
+        #source
+        {
+            width:70px;
+            height:70px;
+            border:1px solid black;
+            background-color:aqua;
+        }
+    </style>
+    <script>
+        $(document).ready(function()
+        {
+            $("#source").draggable();
+            $("#target1, #target2").droppable({
+                drop: function(event, ui) {
+                    $("#source").html("Yes!!!I'm in!!!");}});
+            $("#btnDestroy").click(function(){
+                $("#target2").droppable('destroy');
+                $("#target2").find('p').html("I'm not droppable any more!!!");
+            });
+            $("#btnEnable").click(function(){
+                $("#target1").droppable('enable');
+                $("#target1").find('p').html("I'm now droppable!!!");
+            });
+            $("#btnDisable").click(function(){
+                $("#target1").droppable('disable');
+                $("#target1").find('p').html("I'm not droppable now!!!");
+            });
+            $("#btnTolerance").click(function(){
+                $("#target2").droppable('option',{tolerance:"touch"});
+                $("#target2").find('p').append(" Just touch me to enter inside!!!");
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="btnTolerance">Change Pink Box's Tolerance</button>
+<button id="btnDisable">Disable Gray Box</button>
+<button id="btnEnable">Enable Gray Box</button>
+<button id="btnDestroy">Destroy Pink Box</button><br /><br />
+<div id="source">Drop me inside the gray box!!!</div>
+<div id="target1" class="droppable"><p>DROPPABLE</p></div>
+<div id="target2" class="droppable" style="background-color:pink"><p>DROPPABLE</p></div>
+</body>
+</html>
