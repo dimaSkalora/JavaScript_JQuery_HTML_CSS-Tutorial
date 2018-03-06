@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .source
+        {
+            width:150px;
+            height:150px;
+            border:1px solid black;
+            background-color:aqua;
+            font-size:18px;
+            margin:10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function()
+        {
+            $("#source1").resizable({animate:true});
+            $("#source2").resizable({animate:true, animateDuration:10000});
+            $("#source3").resizable({animate:true, animateEasing:"easeInBounce"});
+        });
+    </script>
+</head>
+<body>
+<div id="source1" class="source">I will reach the final position only after you release the mouse!!!</div>
+<div id="source2" class="source">I will reach the final position in 10 seconds!!!</div>
+<div id="source3" class="source">Easing: easeInBounce</div>
+</body>
+</html>
