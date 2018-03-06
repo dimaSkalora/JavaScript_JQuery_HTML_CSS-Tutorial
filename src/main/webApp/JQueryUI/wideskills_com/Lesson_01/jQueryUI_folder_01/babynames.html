@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="../../resources/jquery-ui.min.css">
+    <script src="../../resources/jquery.js"></script>
+    <script src="../../resources/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var availableNames = [
+                "Aaron",
+                "Abel",
+                "Isabella",
+                "Emma",
+                "Ethan",
+                "Aidan",
+                "Sarah",
+                "Nora",
+                "Nathan",
+                "Samuel",
+                "Hannah",
+                "Eva",
+                "Lauren",
+                "Jeremiah",
+                "Micah",
+                "Bella",
+                "Andrew",
+                "Camilla",
+                "Luke",
+                "Joseph",
+                "Alex",
+                "Gabriel",
+                "Adrian",
+                "Maria",
+                "Vivian",
+                "Daniel",
+                "Ian"
+            ];
+            $("#names").autocomplete({
+                source: availableNames
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="ui-widget">
+    <label for="names">Names: </label>
+    <input id="names">
+</div>
+</body>
+</html>
