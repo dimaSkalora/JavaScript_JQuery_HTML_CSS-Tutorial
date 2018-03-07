@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        ul
+        {
+            list-style-type: none;
+            width:15%;
+        }
+        li
+        {
+            margin: 3px;
+            font-size: 20px;
+            border:2px solid blue;
+            text-align: center;
+            height:25px;
+        }
+        #sortable-1 li
+        {
+            background-color: #A3E0FF;
+        }
+        #sortable-2 li
+        {
+            background-color: #FFB2FF;
+        }
+        #sortable-1 .myDupe
+        {
+            margin: 3px;
+            border:2px solid black;
+            background-color: gray;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#sortable-1").sortable({placeholder:"myDupe", revert:1000, grid:[20,20]});
+            $("#sortable-2").sortable({scroll:false, opacity:0.5, tolerance:"pointer"});
+        });
+    </script>
+</head>
+<body>
+First List:
+<ul id="sortable-1">
+    <li>Product 1</li>
+    <li>Product 2</li>
+    <li>Product 3</li>
+    <li>Product 4</li>
+    <li>Product 5</li>
+</ul>
+<br />
+Second List:
+<ul id="sortable-2">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+</ul>
+</body>
+</html>

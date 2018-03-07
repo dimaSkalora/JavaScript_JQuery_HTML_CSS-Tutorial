@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        ul
+        {
+            list-style-type: none;
+            width:15%;
+            height:220px;
+            border:3px solid green;
+        }
+        li
+        {
+            margin: 3px;
+            font-size: 20px;
+            border:2px solid blue;
+            text-align: center;
+            height:25px;
+        }
+        #sortable-1 li
+        {
+            background-color: #A3E0FF;
+        }
+        #sortable-2 li
+        {
+            background-color: #FFB2FF;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#sortable-1").sortable({connectWith:"#sortable-2",
+                stop:function(event,ui){
+                    $("#result").html("<b>FIRST sortable: STOP sorting</b>");},
+                out:function(event,ui){
+                    $("#result").html("<b>First Sortable: The item is moved away from the sortable list!!!</b>");} });
+            $("#sortable-2").sortable({
+                start:function(event,ui){
+                    $("#result").html("<b>Second sortable: START sorting</b>");},
+                stop:function(event,ui){
+                    $("#result").html("<b>Second sortable: STOP sorting</b>");},
+                receive:function(event,ui){
+                    $("#result").html("<b>Item from FIRST sortable is dropped into SECOND sortable!!!</b>");} });
+        });
+    </script>
+</head>
+<body>
+First List:
+<ul id="sortable-1">
+    <li id="1">Product 1</li>
+    <li id="2">Product 2</li>
+    <li id="3">Product 3</li>
+</ul>
+Second List:
+<ul id="sortable-2">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+<div id="result"></div>
+</body>
+</html>

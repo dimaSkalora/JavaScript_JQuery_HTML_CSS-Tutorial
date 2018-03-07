@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        ul
+        {
+            list-style-type: none;
+            width: 20%;
+        }
+        li
+        {
+            margin: 3px;
+            font-size: 20px;
+            border:2px solid black;
+            background-color: #FFCCFF;
+            width:20%;
+            text-align: center;
+        }
+        #sortable li span
+        {
+            position: absolute;
+            margin-left: -1.3em;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#sortable").sortable();
+        });
+    </script>
+</head>
+<body>
+<b>Sort the following numbers in ascending order:</b><br />
+<ul id="sortable">
+    <li>128</li>
+    <li>527</li>
+    <li>315</li>
+    <li>88</li>
+    <li>223</li>
+    <li>170</li>
+    <li>415</li>
+    <li>129</li>
+    <li>124</li>
+    <li>500</li>
+</ul>
+</body>
+</html>
