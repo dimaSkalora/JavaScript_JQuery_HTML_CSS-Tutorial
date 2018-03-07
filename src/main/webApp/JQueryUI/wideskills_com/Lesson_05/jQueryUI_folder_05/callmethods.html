@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        ol
+        {
+            list-style-type:none;
+            float:left;
+        }
+        li
+        {
+            height:30px;
+            width: 150px;
+            border:1px solid black;
+            margin:2px;
+            font-size:20px;
+        }
+        #selectme1 li
+        {
+            background-color:pink;
+        }
+        #selectme2 li
+        {
+            background-color: fuchsia;
+        }
+        #selectme1 .ui-selected
+        {
+            background: gray;
+            color: white;
+            font-size:30px;
+        }
+        #selectme2 .ui-selected
+        {
+            background: silver;
+            color: white;
+            font-size:25px;
+        }
+        #selectme1 .ui-selecting
+        {
+            background:aqua;
+        }
+        #selectme2 .ui-selecting
+        {
+            background:lime;
+        }
+        #selectme3 .ui-selected
+        {
+            background: aqua;
+            font-weight:bold;
+        }
+        #selectme3 .ui-selecting
+        {
+            background:lime;
+        }
+    </style>
+    <script>
+        $(document).ready(function()
+        {
+            $("#selectme1").selectable();
+            $("#btnDisable").click(function(){
+                $("#selectme1").selectable('disable');
+                alert("The first list is not selectable now!!!");
+            });
+            $("#btnEnable").click(function(){
+                $("#selectme1").selectable('enable');
+                alert("The first list is selectable now!!!");
+            });
+            $("#selectme2").selectable();
+            $("#btnDestroy").click(function(){
+                $("#selectme2").selectable('destroy');
+                alert("The second list is not  selectable anymore!!!");
+            });
+            $("#selectme3").selectable({delay:300});
+            $("#btnGetSet").click(function(){
+                var time = $("#selectme3").selectable('option', 'delay');
+                alert("You have to wait " + time + " milliseconds to start selecting items in the third list!!!");
+                $("#selectme3").selectable('option', "cancel", "#cancelme");
+                alert("Now the fourth item in the third list is not selectable!!!");
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="btnDisable">Disable</button>
+<button id="btnEnable">Enable</button>
+<button id="btnDestroy">Destroy</button>
+<button id="btnGetSet">Get & Set Values</button><br />
+<ol id="selectme1" class="selectme">
+    <li class="ui-widget-content">Item 1</li>
+    <li class="ui-widget-content">Item 2</li>
+    <li class="ui-widget-content">Item 3</li>
+    <li class="ui-widget-content">Item 4</li>
+    <li class="ui-widget-content">Item 5</li>
+</ol>
+<ol id="selectme2" class="selectme">
+    <li class="ui-widget-content">Product 1</li>
+    <li class="ui-widget-content">Product 2</li>
+    <li class="ui-widget-content">Product 3</li>
+    <li class="ui-widget-content">Product 4</li>
+    <li class="ui-widget-content">Product 5</li>
+</ol>
+<ol id="selectme3" class="selectme">
+    <li class="ui-widget-content">Book 1</li>
+    <li class="ui-widget-content">Book 2</li>
+    <li class="ui-widget-content">Book 3</li>
+    <li id="cancelme" class="ui-widget-content">Book 4</li>
+    <li class="ui-widget-content">Book 5</li>
+</ol>
+</body>
+</html>

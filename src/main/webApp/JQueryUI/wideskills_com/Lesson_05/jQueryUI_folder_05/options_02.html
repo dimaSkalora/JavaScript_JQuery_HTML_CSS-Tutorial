@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        ol
+        {
+            list-style-type:none;
+            float:left;
+        }
+        li
+        {
+            height:30px;
+            width: 150px;
+            border:1px solid black;
+            margin:2px;
+            font-size:20px;
+        }
+        #selectme1 li
+        {
+            background-color:pink;
+        }
+        #selectme2 li
+        {
+            background-color: fuchsia;
+        }
+        #selectme1 .ui-selected
+        {
+            background: gray;
+            color: white;
+            font-size:30px;
+        }
+        #selectme2 .ui-selected
+        {
+            background: silver;
+            color: white;
+            font-size:25px;
+        }
+        #selectme1 .ui-selecting
+        {
+            background:aqua;
+        }
+        #selectme2 .ui-selecting
+        {
+            background:lime;
+        }
+        #selectme3 .ui-selected
+        {
+            background: aqua;
+            font-weight:bold;
+        }
+        #selectme3 .ui-selecting
+        {
+            background:lime;
+        }
+    </style>
+    <script>
+        $(document).ready(function()
+        {
+            $("#selectme1").selectable({cancel:"#donotselect"});
+            $("#selectme2").selectable({filter:"#filterme"});
+            $("#selectme3").selectable({tolerance:"fit"});
+        });
+    </script>
+</head>
+<body>
+<ol id="selectme1" class="selectme">
+    <li class="ui-widget-content">Item 1</li>
+    <li id="donotselect" class="ui-widget-content">Item 2</li>
+    <li class="ui-widget-content">Item 3</li>
+    <li class="ui-widget-content">Item 4</li>
+    <li class="ui-widget-content">Item 5</li>
+</ol>
+<ol id="selectme2" class="selectme">
+    <li class="ui-widget-content">Product 1</li>
+    <li class="ui-widget-content">Product 2</li>
+    <li id="filterme" class="ui-widget-content">Product 3</li>
+    <li class="ui-widget-content">Product 4</li>
+    <li class="ui-widget-content">Product 5</li>
+</ol>
+<ol id="selectme3" class="selectme">
+    <li class="ui-widget-content">Book 1</li>
+    <li class="ui-widget-content">Book 2</li>
+    <li class="ui-widget-content">Book 3</li>
+    <li class="ui-widget-content">Book 4</li>
+    <li class="ui-widget-content">Book 5</li>
+</ol>
+</body>
+</html>

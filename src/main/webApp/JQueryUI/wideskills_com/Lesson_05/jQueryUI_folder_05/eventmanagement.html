@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        ol
+        {
+            list-style-type:none;
+            float:left;
+        }
+        li
+        {
+            height:30px;
+            width: 150px;
+            border:1px solid black;
+            margin:2px;
+            background-color:pink;
+            font-size:20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function()
+        {
+            $("#btnSelectable").click(function(){
+                $("#selectme1").selectable({create:function(){
+                    alert("The items are now selectable!!!")
+                },
+                    selecting:function(event, ui){
+                        $(ui.selecting).css("background-color", "aqua");
+                    },
+                    selected:function(event, ui){
+                        $(ui.selected).css("background-color", "gray");
+                    },
+                    stop:function(event, ui){
+                        alert("Selection over");
+                    }});
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="btnSelectable">Make Selectable</button><br />
+<ol id="selectme1" class="selectme">
+    <li class="ui-widget-content">Item 1</li>
+    <li class="ui-widget-content">Item 2</li>
+    <li class="ui-widget-content">Item 3</li>
+    <li class="ui-widget-content">Item 4</li>
+    <li class="ui-widget-content">Item 5</li>
+</ol>
+</body>
+</html>
