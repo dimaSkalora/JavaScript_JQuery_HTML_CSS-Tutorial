@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myTab").tabs(
+                {
+                    hide:5000, show:{effect:"bounce", duration:2000},
+                    create: function (event, ui) {
+                        alert("create");
+                    },
+                    beforeActivate : function (event, ui) {
+                        alert("beforeActivate");
+                    },
+                    activate: function (event, ui) {
+                        alert("activate");
+                    }
+                });
+        });
+    </script>
+</head>
+<body>
+<div id="myTab">
+    <ul id="myUl">
+        <li><a href="#tabs1">Section 1</a></li>
+        <li><a href="#tabs2">Section 2</a></li>
+        <li><a href="#tabs3">Section 3</a></li>
+    </ul>
+    <div id="tabs1">
+        <p>
+            This is my first section with a list of cakes.
+        </p>
+        <ul>
+            <li>Black Forest</li>
+            <li>White Forest</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li>
+        </ul>
+    </div>
+    <div id="tabs2">
+        This is my second section.
+    </div>
+    <div id="tabs3">
+        <p>
+            This is my third section asking you some inputs
+        </p>
+        <form id="collect">
+            User Name:<input type="text" id="uname" /><br />
+            Password:<input type="text" id="pwd" /><br />
+            <button type="submit" value="Submit" id="btnSubmit">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
