@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myAccordion").accordion({heightStyle:"content", icons: {"header":"ui-icon-plus","activeHeader":"ui-icon-minus"}});
+        });
+    </script>
+</head>
+<body>
+<div id="myAccordion">
+    <h3>Section 1</h3>
+    <div>
+        This is my first section with a list of cakes.
+        <ul>
+            <li>Black Forest</li>
+            <li>White Forest</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li>
+        </ul>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+        This is my second section.
+    </div>
+    <h3>Section 3</h3>
+    <div>
+        This is my third section asking you some inputs
+        <form id="collect">
+            User Name:<input type="text" id="uname" /><br />
+            Password:<input type="text" id="pwd" /><br />
+            <button type="submit" value="Submit" id="btnSubmit">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

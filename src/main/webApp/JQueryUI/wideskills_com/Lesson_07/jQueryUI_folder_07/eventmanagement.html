@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myAccordion").accordion(
+                {
+                    create: function (event, ui) {
+                        alert("Created");
+                    },
+                    beforeActivate : function (event, ui) {
+                        alert("beforeActivate");
+                    },
+                    activate: function (event, ui) {
+                        alert("activate");
+                    }
+                });
+        });
+    </script>
+</head>
+<body>
+<div id="myAccordion">
+    <h3>Section 1</h3>
+    <div>
+        This is my first section with a list of cakes.
+        <ul>
+            <li>Black Forest</li>
+            <li>White Forest</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li>
+        </ul>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+        This is my second section.
+    </div>
+</div>
+</body>
+</html>
