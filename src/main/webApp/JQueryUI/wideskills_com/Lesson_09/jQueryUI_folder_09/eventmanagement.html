@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var suggestions = [
+                "Aaron",
+                "Abel",
+                "Nathan",
+                "Sophia",
+                "Noah",
+                "Ethan",
+                "James",
+                "William",
+                "Lucy",
+                "Ruby",
+                "Christopher",
+                "Keira",
+                "Daniel",
+                "Reagan",
+                "Oliver",
+                "Alexander"
+            ];
+            $("#babynames").autocomplete({
+                source: suggestions,
+                create: function (event, ui) {
+                    alert("create: An Autocomplete is created!!!");
+                },
+                close : function (event, ui) {
+                    alert("close: The suggestion list is closed!!!");
+                },
+                change: function (event, ui) {
+                    alert("change: The input is changed!!!");
+                },
+                open : function (event, ui) {
+                    alert("open: The suggestion list is opened!!!");
+                },
+                response: function (event, ui) {
+                    alert("response: The search is complete!!!");
+                },
+                select: function (event, ui) {
+                    alert("select: An item is selected!!!");
+                },
+                search : function (event, ui) {
+                    alert("search: The search is about to begin");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<label for="babynames">Baby names: </label>
+<input id="babynames">
+</body>
+</html>

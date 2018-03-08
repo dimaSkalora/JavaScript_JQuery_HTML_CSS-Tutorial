@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var suggestions = [
+                "Aaron",
+                "Abel",
+                "Nathan",
+                "Sophia",
+                "Noah",
+                "Ethan",
+                "James",
+                "William",
+                "Lucy",
+                "Ruby",
+                "Christopher",
+                "Keira",
+                "Daniel",
+                "Reagan",
+                "Oliver",
+                "Alexander"
+            ];
+            $("#babynames").autocomplete({
+                source: suggestions
+            });
+            $("#btnDisable").click(function(){
+                $("#babynames").autocomplete("disable");
+            });
+            $("#btnEnable").click(function(){
+                $("#babynames").autocomplete("enable");
+            });
+            $("#btnClose").click(function(){
+                $("#babynames").autocomplete("close");
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="btnEnable">Enable</button>
+<button id="btnDisable">Disable</button>
+<button id="btnClose">Close Suggestions</button><br />
+<label for="babynames">Baby names: </label>
+<input id="babynames">
+</body>
+</html>
