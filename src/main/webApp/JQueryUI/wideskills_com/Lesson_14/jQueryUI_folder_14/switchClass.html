@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        . InitialBox
+        {
+            width:200px;
+            height:200px;
+            background-color:pink;
+            border:2px solid fuchsia;
+        }
+        .animatedBox
+        {
+            background-color: purple;
+            width:300px;
+            height:300px;
+        }
+        .switchedBox
+        {
+
+            background:aqua;
+            width:400px;
+            height:400px;
+            border:3px dotted blue;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btnAdd").click(function(){
+                $(".initialBox").addClass("animatedBox", 4000);
+            });
+            $("#btnRemove").click(function(){
+                $(".initialBox").removeClass("animatedBox", 2000);
+            });
+            $("#btnToggle").click(function(){
+                $(".initialBox").toggleClass("animatedBox", 2000);
+            });
+            $("#btnSwitch").click(function(){
+                $(".animatedBox").switchClass("animatedBox", "switchedBox", 5000);
+                $(".switchedBox").switchClass("switchedBox", "animatedBox", 5000);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="box" class="initialBox"></div><br />
+<button id="btnAdd">Add Class</button>
+<button id="btnRemove">Remove Class</button>
+<button id="btnToggle">Toggle Class</button><br /><br />
+<div id="box1" class="animatedBox"></div><br />
+<button id="btnSwitch">Switch Class</button>
+</body>
+</html>

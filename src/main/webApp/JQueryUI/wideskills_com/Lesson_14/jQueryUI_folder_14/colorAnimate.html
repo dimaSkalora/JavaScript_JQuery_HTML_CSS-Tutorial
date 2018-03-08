@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #box
+        {
+            width:200px;
+            height:200px;
+            background-color:pink;
+            color: purple;
+            font-size:30px;
+            border: 2px solid fuchsia;
+            margin:10px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btnColor").click(function(){
+                $("#box").animate({
+                    backgroundColor: "#66FFFF",
+                    borderTopColor: "00CCFF",
+                    borderBottomColor: "00CCFF",
+                    borderLeftColor: "blue",
+                    borderRightColor: "blue",
+                    color: "purple",
+                    outlineColor: "gray",
+                    width:300,
+                    height:300
+                }, 2000);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="box">Welcome!!!</div><br />
+<button id="btnColor">Color Animate</button>
+</body>
+</html>
