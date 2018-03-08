@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#secret").tooltip({
+                position: {my: 'right bottom', at: 'center bottom' },
+                create: function(){$("#result").append("Tooltip created<br />")},
+                open: function(){$("#result").append("Tooltip opened<br />")},
+                close: function(){$("#result").append("Tooltip closed <br />")}
+            });
+        });
+
+    </script>
+</head>
+<body>
+<div id="secret" style="margin:10px;" title="Here comes the secret message: WELCOME!!!">SECRET!SECRET!</div>
+<div id="result"></div>
+</body>
+</html>

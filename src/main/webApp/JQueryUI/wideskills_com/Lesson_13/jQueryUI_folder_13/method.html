@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .ui-menu
+        {
+            width: 200px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#myMenu").menu("focus", null, $("#myMenu").menu().find("#input"));
+            alert("Is this the first item? " + ($("#myMenu").menu("isFirstItem")?"Yes":"No"));
+            alert("Is this the last item? " + ($("#myMenu").menu("isLastItem")?"Yes":"No"));
+            $("#myMenu").menu("expand");
+        });
+
+    </script>
+</head>
+<body>
+<ul id="myMenu">
+    <li><a href="#">Processor</a></li>
+    <li><a href="#">Internal Memory</a>
+        <ul>
+            <li><a href="#">RAM</a></li>
+            <li><a href="#">ROM</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Motherboard</a></li>
+    <li><a href="#">Output</a>
+        <ul>
+            <li><a href="#">Monitor</a></li>
+            <li><a href="#">Printer</a></li>
+            <li><a href="#">Speaker</a></li>
+        </ul>
+    </li>
+    <li id="input"><a href="#">Input</a>
+        <ul>
+            <li><a href="#">Keyboard</a></li>
+            <li><a href="#">Mouse</a></li>
+            <li><a href="#">Scanner</a></li>
+            <li><a href="#">Microphone</a></li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
